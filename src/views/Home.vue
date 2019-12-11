@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <hello-world msg="HELLO WORLD!"/>
+    <hello-world :msg="title"/>
   </div>
 </template>
 
@@ -11,6 +11,11 @@ import HelloWorldComponent from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
+  data() {
+    return {
+      title: "Some title",
+    }
+  },
   components: {
     'hello-world': HelloWorldComponent // tag: component
   }
